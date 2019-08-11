@@ -11,6 +11,9 @@ import PromiseKit
 
 protocol ServiceFactoryProtocol {
     func getEventList(for page: Int) -> Promise<[Event]>
+    
+    func isFavourite(eventId: String?) -> Bool
+    func toggleEventFavourite(eventId: String) -> Bool
 }
 
 class ServiceFactory {
@@ -26,9 +29,11 @@ class ServiceFactory {
     
     init() {
         self.networkService = NetworkService()
+        self.favouriteService = FavouritesService()
     }
     
     var networkService: NetworkServiceProtocol
+    var favouriteService: FavouritesServiceProtocol
 }
 
 extension ServiceFactory: ServiceFactoryProtocol {
@@ -36,4 +41,25 @@ extension ServiceFactory: ServiceFactoryProtocol {
     func getEventList(for page: Int) -> Promise<[Event]> {
         return self.networkService.getEventList(for: page)
     }
+    
+    func isFavourite(eventId: String?) -> Bool {
+        guard let eventId = eventId else {
+            return false
+        }
+        return self.favouriteService.isEventFavourite(eventId: eventId)
+    }
+    
+    func toggleEventFavourite(eventId: String) -> Bool {
+        let currentState = self.favouriteService.isEventFavourite(eventId: eventId)
+
+        if currentState == true {
+        self.favouriteService.setEventAsNotFavourite(eventid: eventId)
+            
+        } else {
+            self.favouriteService.setEventAsFavourite(eventid: eventId)
+        }
+        return currentState == false
+    }
+
+
 }

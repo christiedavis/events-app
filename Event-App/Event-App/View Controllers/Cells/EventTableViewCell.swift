@@ -9,7 +9,7 @@
 import UIKit
 import AlamofireImage
 protocol FavouritingDelegate: class {
-    func setAsFavourite(_ eventID: String)
+    func setAsFavourite(_ eventID: String) -> Bool
 }
 
 struct EventCellVM {
@@ -48,7 +48,11 @@ class EventTableViewCell: UITableViewCell {
         self.nameLabel.text = eventVM.eventName
         self.dateLabel.text = eventVM.eventDateString
         
-        if eventVM.isFavourite {
+        self.setupFavouriting(isFavourite: eventVM.isFavourite)
+    }
+    
+    private func setupFavouriting(isFavourite: Bool) {
+        if isFavourite {
             favouriteButton.setTitle("Unfavourite", for: .normal)
         } else {
             favouriteButton.setTitle("Favourite", for: .normal)
@@ -57,8 +61,15 @@ class EventTableViewCell: UITableViewCell {
     
     @IBAction func favouriteTapped(_ sender: Any) {
        
+        guard let delegate = self.favouriteDelegate else {
+            print("delegate not set")
+            return
+        }
+        
             if let eventID = self.eventID {
-                self.favouriteDelegate?.setAsFavourite(eventID)
+                let favouriteResult = delegate.setAsFavourite(eventID)
+                
+                self.setupFavouriting(isFavourite: favouriteResult)
         }
     }
     

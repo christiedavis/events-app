@@ -73,7 +73,7 @@ extension EventsPresenter: EventsPresenterProtocol {
     func getEventVMFor(_ row: Int) -> EventCellVM? {
         if let event = self.eventFor(row) {
             
-            let eventVM = EventCellVM(eventId: event.id, eventName: event.title, eventDateString: event.startDateAsDate?.asDisplaySlashDateString(), imageUrl: URL(string: event.image ?? "error"), isFavourite: false, favouritingDelegate: self)
+            let eventVM = EventCellVM(eventId: event.id, eventName: event.title, eventDateString: event.startDateAsDate?.asDisplaySlashDateString(), imageUrl: URL(string: event.image ?? "error"), isFavourite: self.serviceFactory.isFavourite(eventId: event.id), favouritingDelegate: self)
             
             return eventVM
         }
@@ -89,7 +89,7 @@ extension EventsPresenter: EventsPresenterProtocol {
 }
 
 extension EventsPresenter: FavouritingDelegate {
-    func setAsFavourite(_ eventID: String) {
-        
+    func setAsFavourite(_ eventID: String) -> Bool {
+        return self.serviceFactory.toggleEventFavourite(eventId: eventID)
     }
 }

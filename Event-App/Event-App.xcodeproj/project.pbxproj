@@ -21,7 +21,7 @@
 		F597953D22FFC86A003A7146 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597953C22FFC86A003A7146 /* Event.swift */; };
 		F597954122FFCAB6003A7146 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597953F22FFCAB6003A7146 /* EventTableViewCell.swift */; };
 		F597954222FFCAB6003A7146 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F597954022FFCAB6003A7146 /* EventTableViewCell.xib */; };
-		F597954422FFD0A0003A7146 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597954322FFD0A0003A7146 /* ImageService.swift */; };
+		F597954422FFD0A0003A7146 /* FavouritesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597954322FFD0A0003A7146 /* FavouritesService.swift */; };
 		F597954622FFD5A3003A7146 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597954522FFD5A3003A7146 /* DateExtensions.swift */; };
 		F597954922FFD972003A7146 /* LoadMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597954722FFD972003A7146 /* LoadMoreTableViewCell.swift */; };
 		F597954A22FFD972003A7146 /* LoadMoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F597954822FFD972003A7146 /* LoadMoreTableViewCell.xib */; };
@@ -61,7 +61,7 @@
 		F597953C22FFC86A003A7146 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		F597953F22FFCAB6003A7146 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		F597954022FFCAB6003A7146 /* EventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
-		F597954322FFD0A0003A7146 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		F597954322FFD0A0003A7146 /* FavouritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesService.swift; sourceTree = "<group>"; };
 		F597954522FFD5A3003A7146 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		F597954722FFD972003A7146 /* LoadMoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreTableViewCell.swift; sourceTree = "<group>"; };
 		F597954822FFD972003A7146 /* LoadMoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadMoreTableViewCell.xib; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 				F5201AF722FFC5D7007E991D /* ServiceFactory.swift */,
 				F5201AF922FFC5E3007E991D /* NetworkService.swift */,
 				F5201AFB22FFC5F1007E991D /* BaseNetworkService.swift */,
-				F597954322FFD0A0003A7146 /* ImageService.swift */,
+				F597954322FFD0A0003A7146 /* FavouritesService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -417,7 +417,7 @@
 				F5201AFA22FFC5E3007E991D /* NetworkService.swift in Sources */,
 				F597954622FFD5A3003A7146 /* DateExtensions.swift in Sources */,
 				F5201AEF22FFC598007E991D /* BasePresenter.swift in Sources */,
-				F597954422FFD0A0003A7146 /* ImageService.swift in Sources */,
+				F597954422FFD0A0003A7146 /* FavouritesService.swift in Sources */,
 				F5CD458D22FFBA8700DDF5AD /* ViewController.swift in Sources */,
 				F5201AF822FFC5D7007E991D /* ServiceFactory.swift in Sources */,
 				F597954922FFD972003A7146 /* LoadMoreTableViewCell.swift in Sources */,

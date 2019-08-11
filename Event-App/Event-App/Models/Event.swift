@@ -20,4 +20,11 @@ class Event: Codable {
         }
         return nil
     }()
+    
+    init(id: String?, title: String?, image: String?, startDate: Double?) {
+        self.id = id
+        self.title = title
+        self.image = image
+        self.startDate = startDate
+    }
 }

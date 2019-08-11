@@ -41,7 +41,8 @@ extension EventsPresenter: EventsPresenterProtocol {
                 print(eventList)
                 self.page += 1
                 let sortedList = eventList.sorted(by: { (event1, event2) -> Bool in
-                    if let eventDate1 = event1.startDateAsDate, let eventDate2 = event2.startDateAsDate {
+                    if let eventDate1 = event1.startDateAsDate,
+                        let eventDate2 = event2.startDateAsDate {
                         return eventDate1 < eventDate2
                     }
                     return true

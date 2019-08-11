@@ -34,7 +34,6 @@ extension FavouritesService: FavouritesServiceProtocol {
     
     func isEventFavourite(eventId: String) -> Bool {
         return UserDefaults.standard.bool(forKey: eventId)
-
     }
     
     private func setFavourite(favourite: Bool, eventId: String) {

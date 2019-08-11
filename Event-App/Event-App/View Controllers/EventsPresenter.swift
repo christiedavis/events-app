@@ -28,7 +28,12 @@ extension EventsPresenter: EventsPresenterProtocol {
         self.serviceFactory.getEventList()
         .done { (eventList) in
             print(eventList)
-            self.eventlist = eventList
+            self.eventlist = eventList.sorted(by: { (event1, event2) -> Bool in
+                if let eventDate1 = event1.startDateAsDate, let eventDate2 = event2.startDateAsDate {
+                    return eventDate1 < eventDate2
+                }
+                return true
+            })
             
             self.view?.hideLoading()
             self.view?.reloadView()
@@ -46,7 +51,8 @@ extension EventsPresenter: EventsPresenterProtocol {
     
     func getEventVMFor(_ row: Int) -> EventCellVM? {
         if let event = self.eventFor(row) {
-            let eventVM = EventCellVM(eventId: event.id, eventName: event.title, eventDateString: "todo", isFavourite: false, favouritingDelegate: self)
+            
+            let eventVM = EventCellVM(eventId: event.id, eventName: event.title, eventDateString: event.startDateAsDate?.asDisplaySlashDateString(), imageUrl: URL(string: event.image ?? "error"), isFavourite: false, favouritingDelegate: self)
             
             return eventVM
         }

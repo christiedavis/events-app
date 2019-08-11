@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import AlamofireImage
 protocol FavouritingDelegate: class {
     func setAsFavourite(_ eventID: String)
 }
@@ -16,6 +16,7 @@ struct EventCellVM {
     var eventId: String?
     var eventName: String?
     var eventDateString: String?
+    var imageUrl: URL?
     var isFavourite: Bool
     var favouritingDelegate: FavouritingDelegate
 }
@@ -36,7 +37,13 @@ class EventTableViewCell: UITableViewCell {
         self.favouriteDelegate = eventVM.favouritingDelegate
         self.eventID = eventVM.eventId
         
-        self.evnetImageView.layer.cornerRadius = 22
+        if let imageurl = eventVM.imageUrl {
+            self.evnetImageView.layer.cornerRadius = 22
+            self.evnetImageView.af_setImage(
+                withURL: imageurl,
+                placeholderImage: UIImage(named: "placeholder_image")
+            )
+        }
         
         self.nameLabel.text = eventVM.eventName
         self.dateLabel.text = eventVM.eventDateString

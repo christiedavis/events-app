@@ -12,5 +12,12 @@ class Event: Codable {
     var id: String?
     var title: String?
     var image: String?
-    var startDate: Int?
+    var startDate: Double?
+    
+    lazy var startDateAsDate: Date? = {
+        if let startDateInt = self.startDate {
+            return Date(timeIntervalSince1970: startDateInt)
+        }
+        return nil
+    }()
 }

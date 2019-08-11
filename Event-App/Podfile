@@ -8,6 +8,7 @@ target 'Event-App' do
   # Pods for Event-App
   pod 'PromiseKit'
     pod 'Alamofire'
+    pod 'AlamofireImage'
 
   target 'Event-AppTests' do
     inherit! :search_paths

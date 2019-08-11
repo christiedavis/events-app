@@ -21,6 +21,8 @@
 		F597953D22FFC86A003A7146 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597953C22FFC86A003A7146 /* Event.swift */; };
 		F597954122FFCAB6003A7146 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597953F22FFCAB6003A7146 /* EventTableViewCell.swift */; };
 		F597954222FFCAB6003A7146 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F597954022FFCAB6003A7146 /* EventTableViewCell.xib */; };
+		F597954422FFD0A0003A7146 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597954322FFD0A0003A7146 /* ImageService.swift */; };
+		F597954622FFD5A3003A7146 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597954522FFD5A3003A7146 /* DateExtensions.swift */; };
 		F5CD458B22FFBA8700DDF5AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD458A22FFBA8700DDF5AD /* AppDelegate.swift */; };
 		F5CD458D22FFBA8700DDF5AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD458C22FFBA8700DDF5AD /* ViewController.swift */; };
 		F5CD459222FFBA8800DDF5AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5CD459122FFBA8800DDF5AD /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 		F597953C22FFC86A003A7146 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		F597953F22FFCAB6003A7146 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		F597954022FFCAB6003A7146 /* EventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
+		F597954322FFD0A0003A7146 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		F597954522FFD5A3003A7146 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		F5CD458722FFBA8700DDF5AD /* Event-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Event-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CD458A22FFBA8700DDF5AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5CD458C22FFBA8700DDF5AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 				F5201AF722FFC5D7007E991D /* ServiceFactory.swift */,
 				F5201AF922FFC5E3007E991D /* NetworkService.swift */,
 				F5201AFB22FFC5F1007E991D /* BaseNetworkService.swift */,
+				F597954322FFD0A0003A7146 /* ImageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				F597953A22FFC83A003A7146 /* Service Errors.swift */,
+				F597954522FFD5A3003A7146 /* DateExtensions.swift */,
 			);
 			path = "Utility Files";
 			sourceTree = "<group>";
@@ -179,7 +185,6 @@
 			isa = PBXGroup;
 			children = (
 				F5CD458922FFBA8700DDF5AD /* Event-App */,
-				F597953922FFC821003A7146 /* Utility Files */,
 				F5CD459E22FFBA8800DDF5AD /* Event-AppTests */,
 				F5CD458822FFBA8700DDF5AD /* Products */,
 				E402E1BD46A44C3D4AB8B7AA /* Pods */,
@@ -204,6 +209,7 @@
 				F5201AE822FFC504007E991D /* Resources */,
 				F5201AE922FFC50F007E991D /* Models */,
 				F5201AEA22FFC515007E991D /* Services */,
+				F597953922FFC821003A7146 /* Utility Files */,
 			);
 			path = "Event-App";
 			sourceTree = "<group>";
@@ -350,6 +356,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Event-App/Pods-Event-App-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -357,6 +364,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,7 +408,9 @@
 				F5201AFC22FFC5F1007E991D /* BaseNetworkService.swift in Sources */,
 				F597953B22FFC83A003A7146 /* Service Errors.swift in Sources */,
 				F5201AFA22FFC5E3007E991D /* NetworkService.swift in Sources */,
+				F597954622FFD5A3003A7146 /* DateExtensions.swift in Sources */,
 				F5201AEF22FFC598007E991D /* BasePresenter.swift in Sources */,
+				F597954422FFD0A0003A7146 /* ImageService.swift in Sources */,
 				F5CD458D22FFBA8700DDF5AD /* ViewController.swift in Sources */,
 				F5201AF822FFC5D7007E991D /* ServiceFactory.swift in Sources */,
 				F5CD458B22FFBA8700DDF5AD /* AppDelegate.swift in Sources */,

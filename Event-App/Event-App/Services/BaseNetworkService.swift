@@ -11,7 +11,6 @@ import PromiseKit
 import Alamofire
 
 internal protocol BaseServiceProtocol {
-    
     func request<T: Encodable, E: Decodable >(method: HTTPMethod, path: String, requestDTO: T?) -> Promise<E>
 }
 
@@ -23,15 +22,15 @@ class BaseNetworkService {
     internal var sessionManager: SessionManager = Alamofire.SessionManager.default
     
     internal func retrieveBasedURL(_ endpoint: String) -> URL? {
-        return URL(string: "https://jsonplaceholder.typicode.com/\(endpoint)")
+        return URL(string: "https://my-json-server.typicode.com/livestyled/mock-api/\(endpoint)")
     }
 }
 
 extension BaseNetworkService: BaseServiceProtocol {
     
     internal func request<T: Encodable, E: Decodable >(method: HTTPMethod, path: String, requestDTO: T?) -> Promise<E> {
-        let dict = try? requestDTO.asDictionary()
-        return request(method: method, path: path, parameters: dict)
+//        let dict = try? requestDTO.asDictionary()
+        return request(method: method, path: path, parameters: nil)
     }
     
     internal func request<T: Decodable>(method: HTTPMethod, path: String, parameters: Parameters? = nil) -> Promise<T> {

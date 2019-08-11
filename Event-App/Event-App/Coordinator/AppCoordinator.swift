@@ -31,7 +31,7 @@ extension AppCoordinator: AppCoordinatorDelegate {
     }
     
     func goToEventsView() {
-        let viewController = BlogListViewController()
+        let viewController = EventsViewController()
         viewController.presenter.coordinator = self
         
         navigationController?.pushViewController(viewController, animated: true)

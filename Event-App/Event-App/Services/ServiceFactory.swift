@@ -10,9 +10,7 @@ import UIKit
 import PromiseKit
 
 protocol ServiceFactoryProtocol {
-    func getBlogPostList() -> Promise<[BlogPost]>
-    func getAllUsers() -> Promise<[User]>
-    func getComments(for postId: Int) -> Promise<[Comment]>
+    func getEventList() -> Promise<[Event]>
 }
 
 class ServiceFactory {
@@ -35,16 +33,7 @@ class ServiceFactory {
 
 extension ServiceFactory: ServiceFactoryProtocol {
     //TODO: this would be good to come back to test further and further test the logic.
-    func getBlogPostList() -> Promise<[BlogPost]> {
-        return self.networkService.getBlogPostList()
-    }
-    
-    func getAllUsers() -> Promise<[User]> {
-        return self.networkService.getAllUsers()
-    }
-    
-    func getComments(for postId: Int) -> Promise<[Comment]> {
-        return self.networkService.getComments(for: postId)
+    func getEventList() -> Promise<[Event]> {
+        return self.networkService.getEventList()
     }
 }
-

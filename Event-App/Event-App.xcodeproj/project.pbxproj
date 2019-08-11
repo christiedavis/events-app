@@ -17,6 +17,8 @@
 		F5201AF822FFC5D7007E991D /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5201AF722FFC5D7007E991D /* ServiceFactory.swift */; };
 		F5201AFA22FFC5E3007E991D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5201AF922FFC5E3007E991D /* NetworkService.swift */; };
 		F5201AFC22FFC5F1007E991D /* BaseNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5201AFB22FFC5F1007E991D /* BaseNetworkService.swift */; };
+		F597953B22FFC83A003A7146 /* Service Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597953A22FFC83A003A7146 /* Service Errors.swift */; };
+		F597953D22FFC86A003A7146 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597953C22FFC86A003A7146 /* Event.swift */; };
 		F5CD458B22FFBA8700DDF5AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD458A22FFBA8700DDF5AD /* AppDelegate.swift */; };
 		F5CD458D22FFBA8700DDF5AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD458C22FFBA8700DDF5AD /* ViewController.swift */; };
 		F5CD459222FFBA8800DDF5AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5CD459122FFBA8800DDF5AD /* Assets.xcassets */; };
@@ -49,6 +51,8 @@
 		F5201AF722FFC5D7007E991D /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
 		F5201AF922FFC5E3007E991D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F5201AFB22FFC5F1007E991D /* BaseNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkService.swift; sourceTree = "<group>"; };
+		F597953A22FFC83A003A7146 /* Service Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Service Errors.swift"; sourceTree = "<group>"; };
+		F597953C22FFC86A003A7146 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		F5CD458722FFBA8700DDF5AD /* Event-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Event-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CD458A22FFBA8700DDF5AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5CD458C22FFBA8700DDF5AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 		F5201AE922FFC50F007E991D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F597953C22FFC86A003A7146 /* Event.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -148,10 +153,19 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		F597953922FFC821003A7146 /* Utility Files */ = {
+			isa = PBXGroup;
+			children = (
+				F597953A22FFC83A003A7146 /* Service Errors.swift */,
+			);
+			path = "Utility Files";
+			sourceTree = "<group>";
+		};
 		F5CD457E22FFBA8700DDF5AD = {
 			isa = PBXGroup;
 			children = (
 				F5CD458922FFBA8700DDF5AD /* Event-App */,
+				F597953922FFC821003A7146 /* Utility Files */,
 				F5CD459E22FFBA8800DDF5AD /* Event-AppTests */,
 				F5CD458822FFBA8700DDF5AD /* Products */,
 				E402E1BD46A44C3D4AB8B7AA /* Pods */,
@@ -365,8 +379,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5201AE722FFC4FB007E991D /* AppCoordinator.swift in Sources */,
+				F597953D22FFC86A003A7146 /* Event.swift in Sources */,
 				F5201AF122FFC5A9007E991D /* EventsPresenter.swift in Sources */,
 				F5201AFC22FFC5F1007E991D /* BaseNetworkService.swift in Sources */,
+				F597953B22FFC83A003A7146 /* Service Errors.swift in Sources */,
 				F5201AFA22FFC5E3007E991D /* NetworkService.swift in Sources */,
 				F5201AEF22FFC598007E991D /* BasePresenter.swift in Sources */,
 				F5CD458D22FFBA8700DDF5AD /* ViewController.swift in Sources */,

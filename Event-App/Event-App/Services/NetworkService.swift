@@ -7,30 +7,18 @@
 //
 
 import UIKit
+import PromiseKit
 
 protocol NetworkServiceProtocol: class {
-    func getBlogPostList() -> Promise<[BlogPost]>
-    func getAllUsers() -> Promise<[User]>
-    func getComments(for postId: Int) -> Promise<[Comment]>
+    func getEventList() -> Promise<[Event]>
 }
 
 class NetworkService: BaseNetworkService {
-    let postsPath = "posts"
-    let userPath = "users"
-    let commentsPath = "comments"
+    let eventPath = "events"
 }
 
 extension NetworkService: NetworkServiceProtocol {
-    func getBlogPostList() -> Promise<[BlogPost]> {
-        return self.request(method: .get, path: self.postsPath, parameters: nil)
-    }
-    
-    func getAllUsers() -> Promise<[User]> {
-        return self.request(method: .get, path: self.userPath, parameters: nil)
-    }
-    
-    func getComments(for postId: Int) -> Promise<[Comment]> {
-        let path = self.commentsPath + "?postId=" + "\(postId)"
-        return self.request(method: .get, path: path, parameters: nil)
+    func getEventList() -> Promise<[Event]> {
+        return self.request(method: .get, path: self.eventPath, parameters: nil)
     }
 }

@@ -8,23 +8,21 @@
 
 import UIKit
 
+protocol EventsViewDelegate: class {
+    
+}
+
 class EventsViewController: UIViewController {
 
+    let presenter = EventsPresenter()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.presenter.view = self
+        self.presenter.load()
 
-        // Do any additional setup after loading the view.
     }
+}
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+extension EventsViewController: EventsViewDelegate {
+    
 }

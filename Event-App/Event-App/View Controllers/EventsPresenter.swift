@@ -8,6 +8,19 @@
 
 import UIKit
 
-class EventsPresenter: BasePresenter {
+protocol EventsPresenterProtocol: BasePresenterProtocol {
+    
+}
 
+class EventsPresenter: BasePresenter {
+    weak var coordinator: AppCoordinatorDelegate?
+    weak var view: EventsViewDelegate?
+}
+
+extension EventsPresenter: EventsPresenterProtocol {
+    func load() {
+        self.serviceFactory.getEventList().done { (eventList) in
+            print(eventList)
+        }
+    }
 }

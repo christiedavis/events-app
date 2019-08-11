@@ -19,6 +19,8 @@
 		F5201AFC22FFC5F1007E991D /* BaseNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5201AFB22FFC5F1007E991D /* BaseNetworkService.swift */; };
 		F597953B22FFC83A003A7146 /* Service Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597953A22FFC83A003A7146 /* Service Errors.swift */; };
 		F597953D22FFC86A003A7146 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597953C22FFC86A003A7146 /* Event.swift */; };
+		F597954122FFCAB6003A7146 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597953F22FFCAB6003A7146 /* EventTableViewCell.swift */; };
+		F597954222FFCAB6003A7146 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F597954022FFCAB6003A7146 /* EventTableViewCell.xib */; };
 		F5CD458B22FFBA8700DDF5AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD458A22FFBA8700DDF5AD /* AppDelegate.swift */; };
 		F5CD458D22FFBA8700DDF5AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD458C22FFBA8700DDF5AD /* ViewController.swift */; };
 		F5CD459222FFBA8800DDF5AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5CD459122FFBA8800DDF5AD /* Assets.xcassets */; };
@@ -53,6 +55,8 @@
 		F5201AFB22FFC5F1007E991D /* BaseNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkService.swift; sourceTree = "<group>"; };
 		F597953A22FFC83A003A7146 /* Service Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Service Errors.swift"; sourceTree = "<group>"; };
 		F597953C22FFC86A003A7146 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		F597953F22FFCAB6003A7146 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		F597954022FFCAB6003A7146 /* EventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
 		F5CD458722FFBA8700DDF5AD /* Event-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Event-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CD458A22FFBA8700DDF5AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5CD458C22FFBA8700DDF5AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 		F5201AED22FFC579007E991D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F597953E22FFCAA5003A7146 /* Cells */,
 				F5201AEE22FFC598007E991D /* BasePresenter.swift */,
 				F5201AF022FFC5A9007E991D /* EventsPresenter.swift */,
 				F5201AF222FFC5B6007E991D /* EventsViewController.swift */,
@@ -159,6 +164,15 @@
 				F597953A22FFC83A003A7146 /* Service Errors.swift */,
 			);
 			path = "Utility Files";
+			sourceTree = "<group>";
+		};
+		F597953E22FFCAA5003A7146 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F597953F22FFCAB6003A7146 /* EventTableViewCell.swift */,
+				F597954022FFCAB6003A7146 /* EventTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		F5CD457E22FFBA8700DDF5AD = {
@@ -287,6 +301,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F597954222FFCAB6003A7146 /* EventTableViewCell.xib in Resources */,
 				F5CD459522FFBA8800DDF5AD /* LaunchScreen.storyboard in Resources */,
 				F5201AF522FFC5B6007E991D /* EventsViewController.xib in Resources */,
 				F5CD459222FFBA8800DDF5AD /* Assets.xcassets in Resources */,
@@ -378,6 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F597954122FFCAB6003A7146 /* EventTableViewCell.swift in Sources */,
 				F5201AE722FFC4FB007E991D /* AppCoordinator.swift in Sources */,
 				F597953D22FFC86A003A7146 /* Event.swift in Sources */,
 				F5201AF122FFC5A9007E991D /* EventsPresenter.swift in Sources */,

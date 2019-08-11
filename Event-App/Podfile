@@ -6,6 +6,8 @@ target 'Event-App' do
   use_frameworks!
 
   # Pods for Event-App
+  pod 'PromiseKit'
+    pod 'Alamofire'
 
   target 'Event-AppTests' do
     inherit! :search_paths

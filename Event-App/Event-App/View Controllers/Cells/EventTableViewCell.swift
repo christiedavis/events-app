@@ -66,10 +66,9 @@ class EventTableViewCell: UITableViewCell {
             return
         }
         
-            if let eventID = self.eventID {
-                let favouriteResult = delegate.setAsFavourite(eventID)
-                
-                self.setupFavouriting(isFavourite: favouriteResult)
+        if let eventID = self.eventID {
+            let favouriteResult = delegate.setAsFavourite(eventID)
+            self.setupFavouriting(isFavourite: favouriteResult)
         }
     }
     

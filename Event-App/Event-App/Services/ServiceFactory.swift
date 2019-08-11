@@ -60,6 +60,4 @@ extension ServiceFactory: ServiceFactoryProtocol {
         }
         return currentState == false
     }
-
-
 }

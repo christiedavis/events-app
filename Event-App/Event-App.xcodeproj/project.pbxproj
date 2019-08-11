@@ -26,8 +26,8 @@
 		F597954922FFD972003A7146 /* LoadMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597954722FFD972003A7146 /* LoadMoreTableViewCell.swift */; };
 		F597954A22FFD972003A7146 /* LoadMoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F597954822FFD972003A7146 /* LoadMoreTableViewCell.xib */; };
 		F597954C22FFE0AA003A7146 /* MockServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597954B22FFE0AA003A7146 /* MockServices.swift */; };
+		F597954E22FFE5F5003A7146 /* FavouriteServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597954D22FFE5F5003A7146 /* FavouriteServiceTests.swift */; };
 		F5CD458B22FFBA8700DDF5AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD458A22FFBA8700DDF5AD /* AppDelegate.swift */; };
-		F5CD458D22FFBA8700DDF5AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD458C22FFBA8700DDF5AD /* ViewController.swift */; };
 		F5CD459222FFBA8800DDF5AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5CD459122FFBA8800DDF5AD /* Assets.xcassets */; };
 		F5CD459522FFBA8800DDF5AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5CD459322FFBA8800DDF5AD /* LaunchScreen.storyboard */; };
 		F5CD45A022FFBA8800DDF5AD /* PresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD459F22FFBA8800DDF5AD /* PresenterTests.swift */; };
@@ -67,9 +67,9 @@
 		F597954722FFD972003A7146 /* LoadMoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreTableViewCell.swift; sourceTree = "<group>"; };
 		F597954822FFD972003A7146 /* LoadMoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadMoreTableViewCell.xib; sourceTree = "<group>"; };
 		F597954B22FFE0AA003A7146 /* MockServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServices.swift; sourceTree = "<group>"; };
+		F597954D22FFE5F5003A7146 /* FavouriteServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteServiceTests.swift; sourceTree = "<group>"; };
 		F5CD458722FFBA8700DDF5AD /* Event-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Event-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CD458A22FFBA8700DDF5AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F5CD458C22FFBA8700DDF5AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F5CD459122FFBA8800DDF5AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5CD459422FFBA8800DDF5AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5CD459622FFBA8800DDF5AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -130,7 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				F5CD458A22FFBA8700DDF5AD /* AppDelegate.swift */,
-				F5CD458C22FFBA8700DDF5AD /* ViewController.swift */,
 				F5CD459122FFBA8800DDF5AD /* Assets.xcassets */,
 				F5CD459322FFBA8800DDF5AD /* LaunchScreen.storyboard */,
 				F5CD459622FFBA8800DDF5AD /* Info.plist */,
@@ -228,6 +227,7 @@
 				F5CD459F22FFBA8800DDF5AD /* PresenterTests.swift */,
 				F597954B22FFE0AA003A7146 /* MockServices.swift */,
 				F5CD45A122FFBA8800DDF5AD /* Info.plist */,
+				F597954D22FFE5F5003A7146 /* FavouriteServiceTests.swift */,
 			);
 			path = "Event-AppTests";
 			sourceTree = "<group>";
@@ -421,7 +421,6 @@
 				F597954622FFD5A3003A7146 /* DateExtensions.swift in Sources */,
 				F5201AEF22FFC598007E991D /* BasePresenter.swift in Sources */,
 				F597954422FFD0A0003A7146 /* FavouritesService.swift in Sources */,
-				F5CD458D22FFBA8700DDF5AD /* ViewController.swift in Sources */,
 				F5201AF822FFC5D7007E991D /* ServiceFactory.swift in Sources */,
 				F597954922FFD972003A7146 /* LoadMoreTableViewCell.swift in Sources */,
 				F5CD458B22FFBA8700DDF5AD /* AppDelegate.swift in Sources */,
@@ -435,6 +434,7 @@
 			files = (
 				F5CD45A022FFBA8800DDF5AD /* PresenterTests.swift in Sources */,
 				F597954C22FFE0AA003A7146 /* MockServices.swift in Sources */,
+				F597954E22FFE5F5003A7146 /* FavouriteServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

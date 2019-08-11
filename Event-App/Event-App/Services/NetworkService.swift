@@ -21,7 +21,4 @@ extension NetworkService: NetworkServiceProtocol {
     func getEventList(for page: Int) -> Promise<[Event]> {
         return self.request(method: .get, path: self.eventPath, parameters: ["_page": page])
     }
-    
-    
-    
 }

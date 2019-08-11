@@ -10,8 +10,9 @@ import UIKit
 import PromiseKit
 
 protocol EventsPresenterProtocol: BasePresenterProtocol {
-    func numRows() -> Int
+    func numRows(section: Int) -> Int
     func getEventVMFor(_ row: Int) -> EventCellVM?
+    func loadMore()
 }
 
 class EventsPresenter: BasePresenter {
@@ -19,34 +20,54 @@ class EventsPresenter: BasePresenter {
     weak var view: EventsViewDelegate?
     
     var eventlist: [Event] = []
+    var page: Int = 1
 }
 
 extension EventsPresenter: EventsPresenterProtocol {
+    
     func load() {
+       self.loadPage()
+    }
+    
+    func loadMore() {
+        self.loadPage()
+    }
+    
+    private func loadPage() {
         self.view?.showLoading()
-
-        self.serviceFactory.getEventList()
-        .done { (eventList) in
-            print(eventList)
-            self.eventlist = eventList.sorted(by: { (event1, event2) -> Bool in
-                if let eventDate1 = event1.startDateAsDate, let eventDate2 = event2.startDateAsDate {
-                    return eventDate1 < eventDate2
-                }
-                return true
-            })
-            
-            self.view?.hideLoading()
-            self.view?.reloadView()
-        }
-        .catch { [weak self] (error) in
-            print(error)
-            self?.view?.hideLoading()
-            self?.view?.showError("Unexpected error getting the latest in events.")
+        
+        self.serviceFactory.getEventList(for: self.page)
+            .done { (eventList) in
+                print(eventList)
+                self.page += 1
+                let sortedList = eventList.sorted(by: { (event1, event2) -> Bool in
+                    if let eventDate1 = event1.startDateAsDate, let eventDate2 = event2.startDateAsDate {
+                        return eventDate1 < eventDate2
+                    }
+                    return true
+                })
+                self.eventlist.append(contentsOf: sortedList)
+                
+                self.view?.hideLoading()
+                self.view?.reloadView()
+            }
+            .catch { [weak self] (error) in
+                print(error)
+                self?.view?.hideLoading()
+                self?.view?.showError("Unexpected error getting the latest in events.")
         }
     }
     
-    func numRows() -> Int {
-        return self.eventlist.count
+    func numRows(section: Int) -> Int {
+        if section == 0 {
+            return self.eventlist.count
+        } else if section == 1 {
+        // if it is more than three pages, the api has nothing more for us
+            if self.page <= 3 {
+                return 1
+            }
+        }
+        return 0
     }
     
     func getEventVMFor(_ row: Int) -> EventCellVM? {

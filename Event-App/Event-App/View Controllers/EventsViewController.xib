@@ -28,31 +28,44 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
-                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="W07-Ye-6q5">
-                    <rect key="frame" x="197" y="438" width="20" height="20"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="W07-Ye-6q5">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="color" name="systemPurpleColor" catalog="System" colorSpace="catalog"/>
                 </activityIndicatorView>
-                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WFB-VS-kOJ">
-                    <rect key="frame" x="87" y="384" width="240" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WFB-VS-kOJ">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BI-7C-KNV">
-                            <rect key="frame" x="99" y="53" width="42" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BI-7C-KNV">
+                            <rect key="frame" x="8" y="409" width="398" height="0.0"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="9BI-7C-KNV" secondAttribute="trailing" constant="8" id="bDi-49-iHi"/>
+                        <constraint firstItem="9BI-7C-KNV" firstAttribute="leading" secondItem="WFB-VS-kOJ" secondAttribute="leading" constant="8" id="cJF-Kh-03H"/>
+                        <constraint firstItem="9BI-7C-KNV" firstAttribute="centerY" secondItem="WFB-VS-kOJ" secondAttribute="centerY" id="o6s-OT-NkQ"/>
+                        <constraint firstItem="9BI-7C-KNV" firstAttribute="centerX" secondItem="WFB-VS-kOJ" secondAttribute="centerX" id="ziR-FB-gdV"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="FPb-9P-g55" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="61s-De-WnY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="W07-Ye-6q5" secondAttribute="trailing" id="72Y-A6-2bg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FPb-9P-g55" secondAttribute="trailing" id="8J0-8f-UWo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WFB-VS-kOJ" secondAttribute="trailing" id="CUF-a3-GJP"/>
+                <constraint firstItem="WFB-VS-kOJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="F3K-wm-OKK"/>
+                <constraint firstItem="W07-Ye-6q5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="HSb-RV-UrP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="W07-Ye-6q5" secondAttribute="bottom" id="NlD-hf-s6Z"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="FPb-9P-g55" secondAttribute="bottom" id="OJO-0w-S7Q"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="WFB-VS-kOJ" secondAttribute="bottom" id="dIQ-Ju-gTE"/>
                 <constraint firstItem="FPb-9P-g55" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ldL-ZK-roO"/>
+                <constraint firstItem="W07-Ye-6q5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uDN-Sz-tuo"/>
+                <constraint firstItem="WFB-VS-kOJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="w6R-ND-nxd"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>

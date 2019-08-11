@@ -10,7 +10,7 @@ import UIKit
 import PromiseKit
 
 protocol NetworkServiceProtocol: class {
-    func getEventList() -> Promise<[Event]>
+    func getEventList(for page: Int) -> Promise<[Event]>
 }
 
 class NetworkService: BaseNetworkService {
@@ -18,7 +18,10 @@ class NetworkService: BaseNetworkService {
 }
 
 extension NetworkService: NetworkServiceProtocol {
-    func getEventList() -> Promise<[Event]> {
-        return self.request(method: .get, path: self.eventPath, parameters: nil)
+    func getEventList(for page: Int) -> Promise<[Event]> {
+        return self.request(method: .get, path: self.eventPath, parameters: ["_page": page])
     }
+    
+    
+    
 }

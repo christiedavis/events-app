@@ -8,7 +8,7 @@
 
 import UIKit
 
-//class ImageService: NSObject {
+class ImageService: NSObject {
 //
 //    let imageCache = NSCache<NSString, UIImage>()
 //    
@@ -30,4 +30,4 @@ import UIKit
 //            }
 //        }
 //    }
-//}
+}

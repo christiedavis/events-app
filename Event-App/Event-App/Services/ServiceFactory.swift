@@ -10,7 +10,7 @@ import UIKit
 import PromiseKit
 
 protocol ServiceFactoryProtocol {
-    func getEventList() -> Promise<[Event]>
+    func getEventList(for page: Int) -> Promise<[Event]>
 }
 
 class ServiceFactory {
@@ -33,7 +33,7 @@ class ServiceFactory {
 
 extension ServiceFactory: ServiceFactoryProtocol {
     //TODO: this would be good to come back to test further and further test the logic.
-    func getEventList() -> Promise<[Event]> {
-        return self.networkService.getEventList()
+    func getEventList(for page: Int) -> Promise<[Event]> {
+        return self.networkService.getEventList(for: page)
     }
 }

@@ -11,7 +11,7 @@ import PromiseKit
 import Alamofire
 
 internal protocol BaseServiceProtocol {
-    func request<T: Encodable, E: Decodable >(method: HTTPMethod, path: String, requestDTO: T?) -> Promise<E>
+    func request<T: Decodable>(method: HTTPMethod, path: String, parameters: Parameters?) -> Promise<T>
 }
 
 class BaseNetworkService {
@@ -28,12 +28,7 @@ class BaseNetworkService {
 
 extension BaseNetworkService: BaseServiceProtocol {
     
-    internal func request<T: Encodable, E: Decodable >(method: HTTPMethod, path: String, requestDTO: T?) -> Promise<E> {
-//        let dict = try? requestDTO.asDictionary()
-        return request(method: method, path: path, parameters: nil)
-    }
-    
-    internal func request<T: Decodable>(method: HTTPMethod, path: String, parameters: Parameters? = nil) -> Promise<T> {
+    func request<T: Decodable>(method: HTTPMethod, path: String, parameters: Parameters? = nil) -> Promise<T> {
         guard let url = retrieveBasedURL(path) else {
             return Promise(error: ServiceError.invalidEndpoint)
             
